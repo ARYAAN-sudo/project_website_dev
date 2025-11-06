@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>सरकारी योजना | Government Schemes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-water"></i>
+                    <span class="logo-text" data-mr="मीठ पान व्यवसाय" data-en="Salt Pan Business">मीठ पान व्यवसाय</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a>
+                    <a href="production.html" data-mr="उत्पादन प्रक्रिया" data-en="Production Process">उत्पादन प्रक्रिया</a>
+                    <a href="salt-types.html" data-mr="मीठाचे प्रकार" data-en="Salt Types">मीठाचे प्रकार</a>
+                    <a href="regions.html" data-mr="क्षेत्रे" data-en="Regions">क्षेत्रे</a>
+                    <a href="market.html" data-mr="बाजार" data-en="Market">बाजार</a>
+                    <a href="schemes.html" data-mr="योजना" data-en="Schemes" class="active">योजना</a>
+                </div>
+                <div class="nav-right">
+                    <button id="voiceBtn" class="voice-btn"><i class="fas fa-volume-up"></i></button>
+                    <button id="langToggle" class="lang-toggle"><span id="currentLang">English</span></button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a>
+        <a href="production.html" data-mr="उत्पादन प्रक्रिया" data-en="Production">उत्पादन प्रक्रिया</a>
+        <a href="salt-types.html" data-mr="मीठाचे प्रकार" data-en="Salt Types">मीठाचे प्रकार</a>
+        <a href="regions.html" data-mr="क्षेत्रे" data-en="Regions">क्षेत्रे</a>
+        <a href="market.html" data-mr="बाजार" data-en="Market">बाजार</a>
+        <a href="schemes.html" data-mr="योजना" data-en="Schemes">योजना</a>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-mr="सरकारी योजना आणि मदत" data-en="Government Schemes and Support">सरकारी योजना आणि मदत</h1>
+            <p data-mr="सबसिडी, कर्ज आणि प्रशिक्षण कार्यक्रमांची संपूर्ण माहिती" data-en="Complete information on subsidies, loans and training programs">सबसिडी, कर्ज आणि प्रशिक्षण कार्यक्रमांची संपूर्ण माहिती</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="schemes-detailed">
+                <!-- PMMSY Scheme -->
+                <div class="scheme-detailed-card">
+                    <div class="scheme-header-detail">
+                        <div class="scheme-badge">
+                            <i class="fas fa-star"></i>
+                            <span data-mr="लोकप्रिय" data-en="Popular">लोकप्रिय</span>
+                        </div>
+                        <h2 data-mr="प्रधानमंत्री मत्स्य संपदा योजना (PMMSY)" data-en="Pradhan Mantri Matsya Sampada Yojana">प्रधानमंत्री मत्स्य संपदा योजना (PMMSY)</h2>
+                    </div>
+                    <div class="scheme-body">
+                        <div class="scheme-image-container">
+                            <img src="images/pmmsy.jpg" alt="PMMSY Scheme" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop'">
+                        </div>
+                        <div class="scheme-details">
+                            <div class="benefits-box">
+                                <h3 data-mr="योजनेचे फायदे" data-en="Scheme Benefits">योजनेचे फायदे</h3>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <strong>40% ते 60%</strong> <span data-mr="सबसिडी (वर्गानुसार)" data-en="subsidy (category-wise)">सबसिडी (वर्गानुसार)</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="किमान कर्ज: ₹3 लाख" data-en="Minimum loan: ₹3 lakh">किमान कर्ज: ₹3 लाख</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="कर्जावर 7-9% व्याज दर" data-en="7-9% interest rate on loan">कर्जावर 7-9% व्याज दर</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="5 वर्षांची परतफेड मुदत" data-en="5 years repayment period">5 वर्षांची परतफेड मुदत</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="eligibility-box">
+                                <h3 data-mr="पात्रता" data-en="Eligibility">पात्रता</h3>
+                                <ul>
+                                    <li data-mr="मीठ पान उत्पादक" data-en="Salt pan producer">मीठ पान उत्पादक</li>
+                                    <li data-mr="किनारपट्टीवरील शेतकरी" data-en="Coastal farmer">किनारपट्टीवरील शेतकरी</li>
+                                    <li data-mr="SHG/सहकारी संस्था" data-en="SHG/Cooperative society">SHG/सहकारी संस्था</li>
+                                    <li data-mr="वय: 18-65 वर्षे" data-en="Age: 18-65 years">वय: 18-65 वर्षे</li>
+                                </ul>
+                            </div>
+
+                            <div class="documents-box">
+                                <h3 data-mr="आवश्यक कागदपत्रे" data-en="Required Documents">आवश्यक कागदपत्रे</h3>
+                                <div class="documents-list">
+                                    <div class="doc-item">
+                                        <i class="fas fa-id-card"></i>
+                                        <span data-mr="आधार कार्ड" data-en="Aadhaar Card">आधार कार्ड</span>
+                                    </div>
+                                    <div class="doc-item">
+                                        <i class="fas fa-landmark"></i>
+                                        <span data-mr="बँक पासबुक" data-en="Bank Passbook">बँक पासबुक</span>
+                                    </div>
+                                    <div class="doc-item">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span data-mr="जमीन दस्तऐवज" data-en="Land Documents">जमीन दस्तऐवज</span>
+                                    </div>
+                                    <div class="doc-item">
+                                        <i class="fas fa-image"></i>
+                                        <span data-mr="पासपोर्ट फोटो" data-en="Passport Photo">पासपोर्ट फोटो</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="application-process">
+                                <h3 data-mr="अर्ज प्रक्रिया" data-en="Application Process">अर्ज प्रक्रिया</h3>
+                                <div class="steps-horizontal">
+                                    <div class="step-h">
+                                        <div class="step-number-h">1</div>
+                                        <p data-mr="जवळच्या मत्स्य विभागात भेट द्या" data-en="Visit nearest Fisheries Dept">जवळच्या मत्स्य विभागात भेट द्या</p>
+                                    </div>
+                                    <div class="arrow-h">→</div>
+                                    <div class="step-h">
+                                        <div class="step-number-h">2</div>
+                                        <p data-mr="अर्ज फॉर्म भरा आणि कागदपत्रे जोडा" data-en="Fill form and attach documents">अर्ज फॉर्म भरा आणि कागदपत्रे जोडा</p>
+                                    </div>
+                                    <div class="arrow-h">→</div>
+                                    <div class="step-h">
+                                        <div class="step-number-h">3</div>
+                                        <p data-mr="तपासणी आणि मंजुरी" data-en="Verification and approval">तपासणी आणि मंजुरी</p>
+                                    </div>
+                                    <div class="arrow-h">→</div>
+                                    <div class="step-h">
+                                        <div class="step-number-h">4</div>
+                                        <p data-mr="सबसिडी बँक खात्यात जमा" data-en="Subsidy credited to bank">सबसिडी बँक खात्यात जमा</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-scheme">
+                                <h4 data-mr="अधिक माहितीसाठी" data-en="For More Information">अधिक माहितीसाठी</h4>
+                                <p><i class="fas fa-phone"></i> 1800-425-1660 (टोल फ्री)</p>
+                                <p><i class="fas fa-globe"></i> pmmsy.dof.gov.in</p>
+                                <p><i class="fas fa-envelope"></i> pmmsy-dof@gov.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MUDRA Loan Scheme -->
+                <div class="scheme-detailed-card">
+                    <div class="scheme-header-detail">
+                        <h2 data-mr="प्रधानमंत्री मुद्रा योजना (PMMY)" data-en="Pradhan Mantri MUDRA Yojana">प्रधानमंत्री मुद्रा योजना (PMMY)</h2>
+                    </div>
+                    <div class="scheme-body">
+                        <div class="scheme-image-container">
+                            <img src="images/mudra.jpg" alt="MUDRA Scheme" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop'">
+                        </div>
+                        <div class="scheme-details">
+                            <p data-mr="लघु व्यवसायांसाठी कर्ज योजना. मीठ पान व्यवसाय विस्तारासाठी उपयुक्त." data-en="Loan scheme for small businesses. Useful for salt pan business expansion.">लघु व्यवसायांसाठी कर्ज योजना. मीठ पान व्यवसाय विस्तारासाठी उपयुक्त.</p>
+                            
+                            <div class="mudra-categories">
+                                <div class="mudra-cat">
+                                    <h4>शिशु (Shishu)</h4>
+                                    <p class="amount">₹50,000 पर्यंत</p>
+                                    <p data-mr="छोटे उपकरणे खरेदीसाठी" data-en="For small equipment purchase">छोटे उपकरणे खरेदीसाठी</p>
+                                </div>
+                                <div class="mudra-cat">
+                                    <h4>किशोर (Kishore)</h4>
+                                    <p class="amount">₹50,000 - ₹5 लाख</p>
+                                    <p data-mr="तळे विस्तार, पंप खरेदी" data-en="Pan expansion, pump purchase">तळे विस्तार, पंप खरेदी</p>
+                                </div>
+                                <div class="mudra-cat">
+                                    <h4>तरुण (Tarun)</h4>
+                                    <p class="amount">₹5 लाख - ₹10 लाख</p>
+                                    <p data-mr="मोठे विस्तार, यंत्रसामग्री" data-en="Large expansion, machinery">मोठे विस्तार, यंत्रसामग्री</p>
+                                </div>
+                            </div>
+
+                            <div class="benefits-box">
+                                <h3 data-mr="फायदे" data-en="Benefits">फायदे</h3>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="कोणतीही जमानत नाही" data-en="No collateral required">कोणतीही जमानत नाही</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="कमी व्याज दर (8-12%)" data-en="Low interest rate (8-12%)">कमी व्याज दर (8-12%)</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="लवकर मंजुरी (7-10 दिवस)" data-en="Quick approval (7-10 days)">लवकर मंजुरी (7-10 दिवस)</span></li>
+                                    <li><i class="fas fa-check-circle"></i> <span data-mr="सर्व बँकांमध्ये उपलब्ध" data-en="Available in all banks">सर्व बँकांमध्ये उपलब्ध</span></li>
+                                </ul>
+                            </div>
+
+                            <div class="application-process">
+                                <h3 data-mr="अर्ज कसा करावा" data-en="How to Apply">अर्ज कसा करावा</h3>
+                                <ol class="simple-steps">
+                                    <li data-mr="जवळच्या बँकेत जा (कोणतीही बँक)" data-en="Visit nearest bank (any bank)">जवळच्या बँकेत जा (कोणतीही बँक)</li>
+                                    <li data-mr="मुद्रा कर्ज अर्ज फॉर्म मागा" data-en="Ask for MUDRA loan application form">मुद्रा कर्ज अर्ज फॉर्म मागा</li>
+                                    <li data-mr="व्यवसाय योजना सोबत सादर करा" data-en="Submit with business plan">व्यवसाय योजना सोबत सादर करा</li>
+                                    <li data-mr="7-10 दिवसात मंजुरी मिळेल" data-en="Approval in 7-10 days">7-10 दिवसात मंजुरी मिळेल</li>
+                                </ol>
+                            </div>
+
+                            <div class="contact-scheme">
+                                <h4 data-mr="संपर्क" data-en="Contact">संपर्क</h4>
+                                <p><i class="fas fa-phone"></i> 1800-180-1111</p>
+                                <p><i class="fas fa-globe"></i> udyamimitra.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Training Program -->
+                <div class="scheme-detailed-card">
+                    <div class="scheme-header-detail">
+                        <h2 data-mr="मीठ उत्पादक प्रशिक्षण कार्यक्रम" data-en="Salt Producer Training Program">मीठ उत्पादक प्रशिक्षण कार्यक्रम</h2>
+                    </div>
+                    <div class="scheme-body">
+                        <div class="scheme-image-container">
+                            <img src="images/training.jpg" alt="Training Program" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop'">
+                        </div>
+                        <div class="scheme-details">
+                            <p data-mr="सरकार आणि MSME मंत्रालयाद्वारे मोफत प्रशिक्षण. आधुनिक तंत्रज्ञान आणि उत्पादन पद्धती शिकवल्या जातात." data-en="Free training by Government and MSME Ministry. Modern technology and production methods taught.">सरकार आणि MSME मंत्रालयाद्वारे मोफत प्रशिक्षण. आधुनिक तंत्रज्ञान आणि उत्पादन पद्धती शिकवल्या जातात.</p>
+                            
+                            <div class="training-modules">
+                                <h3 data-mr="प्रशिक्षण विषय" data-en="Training Modules">प्रशिक्षण विषय</h3>
+                                <div class="modules-grid">
+                                    <div class="module">
+                                        <i class="fas fa-tools"></i>
+                                        <h4 data-mr="आधुनिक तंत्रज्ञान" data-en="Modern Technology">आधुनिक तंत्रज्ञान</h4>
+                                        <p data-mr="नवीन उपकरणे आणि पद्धती" data-en="New equipment and methods">नवीन उपकरणे आणि पद्धती</p>
+                                    </div>
+                                    <div class="module">
+                                        <i class="fas fa-leaf"></i>
+                                        <h4 data-mr="गुणवत्ता सुधारणा" data-en="Quality Improvement">गुणवत्ता सुधारणा</h4>
+                                        <p data-mr="उत्तम दर्जाचे मीठ उत्पादन" data-en="High quality salt production">उत्तम दर्जाचे मीठ उत्पादन</p>
+                                    </div>
+                                    <div class="module">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h4 data-mr="व्यवसाय व्यवस्थापन" data-en="Business Management">व्यवसाय व्यवस्थापन</h4>
+                                        <p data-mr="नफा वाढवण्याच्या तंत्रा" data-en="Profit maximization techniques">नफा वाढवण्याच्या तंत्रा</p>
+                                    </div>
+                                    <div class="module">
+                                        <i class="fas fa-shopping-cart"></i>
+                                        <h4 data-mr="विपणन कौशल्य" data-en="Marketing Skills">विपणन कौशल्य</h4>
+                                        <p data-mr="ऑनलाइन विक्री, ब्रँडिंग" data-en="Online sales, branding">ऑनलाइन विक्री, ब्रँडिंग</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="training-details-box">
+                                <div class="training-info">
+                                    <h4 data-mr="कालावधी" data-en="Duration">कालावधी</h4>
+                                    <p>5-7 दिवस</p>
+                                </div>
+                                <div class="training-info">
+                                    <h4 data-mr="फी" data-en="Fee">फी</h4>
+                                    <p data-mr="पूर्णपणे मोफत" data-en="Completely Free">पूर्णपणे मोफत</p>
+                                </div>
+                                <div class="training-info">
+                                    <h4 data-mr="प्रमाणपत्र" data-en="Certificate">प्रमाणपत्र</h4>
+                                    <p data-mr="सरकारी प्रमाणपत्र" data-en="Government Certificate">सरकारी प्रमाणपत्र</p>
+                                </div>
+                                <div class="training-info">
+                                    <h4 data-mr="स्थान" data-en="Location">स्थान</h4>
+                                    <p data-mr="जिल्हा केंद्रे" data-en="District Centers">जिल्हा केंद्रे</p>
+                                </div>
+                            </div>
+
+                            <div class="application-process">
+                                <h3 data-mr="नोंदणी प्रक्रिया" data-en="Registration Process">नोंदणी प्रक्रिया</h3>
+                                <div class="registration-options">
+                                    <div class="reg-option">
+                                        <i class="fas fa-building"></i>
+                                        <h4 data-mr="ऑफलाइन" data-en="Offline">ऑफलाइन</h4>
+                                        <p data-mr="जिल्हा उद्योग केंद्रात भेट द्या" data-en="Visit District Industry Centre">जिल्हा उद्योग केंद्रात भेट द्या</p>
+                                    </div>
+                                    <div class="reg-option">
+                                        <i class="fas fa-laptop"></i>
+                                        <h4 data-mr="ऑनलाइन" data-en="Online">ऑनलाइन</h4>
+                                        <p>msme.gov.in वर नोंदणी करा</p>
+                                    </div>
+                                    <div class="reg-option">
+                                        <i class="fas fa-phone"></i>
+                                        <h4 data-mr="फोनवर" data-en="By Phone">फोनवर</h4>
+                                        <p>1800-425-1515 (टोल फ्री)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-mr="इतर उपयुक्त योजना" data-en="Other Useful Schemes">इतर उपयुक्त योजना</h2>
+            <div class="other-schemes-grid">
+                <div class="small-scheme-card">
+                    <i class="fas fa-users"></i>
+                    <h3 data-mr="महाराष्ट्र मीठ सहकारी संस्था" data-en="Maharashtra Salt Cooperative">महाराष्ट्र मीठ सहकारी संस्था</h3>
+                    <p data-mr="सभासद शुल्क: ₹500-1000 | चांगले दर मिळतात" data-en="Membership fee: ₹500-1000 | Better rates">सभासद शुल्क: ₹500-1000 | चांगले दर मिळतात</p>
+                </div>
+                <div class="small-scheme-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3 data-mr="डिजिटल साक्षरता कार्यक्रम" data-en="Digital Literacy Program">डिजिटल साक्षरता कार्यक्रम</h3>
+                    <p data-mr="CSC केंद्रावर मोफत | ऑनलाइन बँकिंग, विक्री" data-en="Free at CSC | Online banking, sales">CSC केंद्रावर मोफत | ऑनलाइन बँकिंग, विक्री</p>
+                </div>
+                <div class="small-scheme-card">
+                    <i class="fas fa-certificate"></i>
+                    <h3 data-mr="ऑर्गॅनिक प्रमाणीकरण" data-en="Organic Certification">ऑर्गॅनिक प्रमाणीकरण</h3>
+                    <p data-mr="50% सबसिडी | 30-40% अधिक दर" data-en="50% subsidy | 30-40% higher rates">50% सबसिडी | 30-40% अधिक दर</p>
+                </div>
+                <div class="small-scheme-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3 data-mr="विमा योजना" data-en="Insurance Scheme">विमा योजना</h3>
+                    <p data-mr="पीक विमा, उपकरणे विमा | कमी प्रीमियम" data-en="Crop insurance, equipment insurance | Low premium">पीक विमा, उपकरणे विमा | कमी प्रीमियम</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-mr="संपर्क माहिती" data-en="Contact Info">संपर्क माहिती</h4>
+                    <p><i class="fas fa-phone"></i> 1800-233-3663</p>
+                    <p><i class="fas fa-envelope"></i> help@saltpanbusiness.gov.in</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-mr="द्रुत दुवे" data-en="Quick Links">द्रुत दुवे</h4>
+                    <p><a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a></p>
+                    <p><a href="market.html" data-mr="बाजार" data-en="Market">बाजार</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-mr="© २०२५ मीठ पान व्यवसाय मार्गदर्शक" data-en="© 2025 Salt Pan Business Guide">© २०२५ मीठ पान व्यवसाय मार्गदर्शक</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

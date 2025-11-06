@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बाजार माहिती | Market Information</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <i class="fas fa-water"></i>
+                    <span class="logo-text" data-mr="मीठ पान व्यवसाय" data-en="Salt Pan Business">मीठ पान व्यवसाय</span>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a>
+                    <a href="production.html" data-mr="उत्पादन प्रक्रिया" data-en="Production Process">उत्पादन प्रक्रिया</a>
+                    <a href="salt-types.html" data-mr="मीठाचे प्रकार" data-en="Salt Types">मीठाचे प्रकार</a>
+                    <a href="regions.html" data-mr="क्षेत्रे" data-en="Regions">क्षेत्रे</a>
+                    <a href="market.html" data-mr="बाजार" data-en="Market" class="active">बाजार</a>
+                    <a href="schemes.html" data-mr="योजना" data-en="Schemes">योजना</a>
+                </div>
+                <div class="nav-right">
+                    <button id="voiceBtn" class="voice-btn"><i class="fas fa-volume-up"></i></button>
+                    <button id="langToggle" class="lang-toggle"><span id="currentLang">English</span></button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a>
+        <a href="production.html" data-mr="उत्पादन प्रक्रिया" data-en="Production">उत्पादन प्रक्रिया</a>
+        <a href="salt-types.html" data-mr="मीठाचे प्रकार" data-en="Salt Types">मीठाचे प्रकार</a>
+        <a href="regions.html" data-mr="क्षेत्रे" data-en="Regions">क्षेत्रे</a>
+        <a href="market.html" data-mr="बाजार" data-en="Market">बाजार</a>
+        <a href="schemes.html" data-mr="योजना" data-en="Schemes">योजना</a>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 data-mr="बाजार माहिती आणि किंमत" data-en="Market Information and Pricing">बाजार माहिती आणि किंमत</h1>
+            <p data-mr="२०२५ च्या अ‌द्ययावत किमती आणि ट्रेंड" data-en="2025 updated prices and trends">२०२५ च्या अद्ययावत किमती आणि ट्रेंड</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="market-overview">
+                <div class="price-trends">
+                    <h2 class="section-title" data-mr="सध्याच्या किमती (२०२५)" data-en="Current Prices (2025)">सध्याच्या किमती (२०२५)</h2>
+                    <div class="price-cards">
+                        <div class="price-detail-card">
+                            <div class="price-icon">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h3 data-mr="समुद्री मीठ" data-en="Sea Salt">समुद्री मीठ</h3>
+                            <div class="price-range">
+                                <span class="price">₹400-600</span>
+                                <span class="unit" data-mr="/क्विंटल" data-en="/quintal">/क्विंटल</span>
+                            </div>
+                            <div class="price-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                <span data-mr="मागणी वाढत आहे" data-en="Demand increasing">मागणी वाढत आहे</span>
+                            </div>
+                            <p class="market-note" data-mr="निर्यात बाजारात चांगली मागणी" data-en="Good demand in export market">निर्यात बाजारात चांगली मागणी</p>
+                        </div>
+
+                        <div class="price-detail-card">
+                            <div class="price-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3 data-mr="आयोडीन युक्त मीठ" data-en="Iodized Salt">आयोडीन युक्त मीठ</h3>
+                            <div class="price-range">
+                                <span class="price">₹350-500</span>
+                                <span class="unit" data-mr="/क्विंटल" data-en="/quintal">/क्विंटल</span>
+                            </div>
+                            <div class="price-trend stable">
+                                <i class="fas fa-minus"></i>
+                                <span data-mr="स्थिर" data-en="Stable">स्थिर</span>
+                            </div>
+                            <p class="market-note" data-mr="घरगुती वापरासाठी सर्वाधिक मागणी" data-en="Highest demand for household use">घरगुती वापरासाठी सर्वाधिक मागणी</p>
+                        </div>
+
+                        <div class="price-detail-card">
+                            <div class="price-icon">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 data-mr="औद्योगिक मीठ" data-en="Industrial Salt">औद्योगिक मीठ</h3>
+                            <div class="price-range">
+                                <span class="price">₹150-250</span>
+                                <span class="unit" data-mr="/क्विंटल" data-en="/quintal">/क्विंटल</span>
+                            </div>
+                            <div class="price-trend stable">
+                                <i class="fas fa-minus"></i>
+                                <span data-mr="स्थिर" data-en="Stable">स्थिर</span>
+                            </div>
+                            <p class="market-note" data-mr="रासायनिक उद्योगासाठी मोठी मागणी" data-en="Large demand for chemical industry">रासायनिक उद्योगासाठी मोठी मागणी</p>
+                        </div>
+
+                        <div class="price-detail-card">
+                            <div class="price-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 data-mr="प्रीमियम सेंधा मीठ" data-en="Premium Rock Salt">प्रीमियम सेंधा मीठ</h3>
+                            <div class="price-range">
+                                <span class="price">₹500-800</span>
+                                <span class="unit" data-mr="/क्विंटल" data-en="/quintal">/क्विंटल</span>
+                            </div>
+                            <div class="price-trend up">
+                                <i class="fas fa-arrow-up"></i>
+                                <span data-mr="वाढत आहे" data-en="Increasing">वाढत आहे</span>
+                            </div>
+                            <p class="market-note" data-mr="आरोग्य जागरूकतेमुळे मागणी वाढली" data-en="Demand increased due to health awareness">आरोग्य जागरूकतेमुळे मागणी वाढली</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-mr="उद्योगानुसार मागणी" data-en="Demand by Industry">उद्योगानुसार मागणी</h2>
+            <div class="demand-analysis">
+                <div class="demand-chart">
+                    <div class="demand-item" style="--percentage: 60%">
+                        <div class="demand-bar"></div>
+                        <div class="demand-info">
+                            <i class="fas fa-utensils"></i>
+                            <div>
+                                <h3 data-mr="खाद्य उद्योग" data-en="Food Industry">खाद्य उद्योग</h3>
+                                <p><strong>60%</strong> <span data-mr="एकूण मागणी" data-en="Total Demand">एकूण मागणी</span></p>
+                                <p class="details" data-mr="स्थिर आणि सतत मागणी. वाढीचा दर: 5-7% प्रतिवर्ष" data-en="Stable and continuous demand. Growth rate: 5-7% per year">स्थिर आणि सतत मागणी. वाढीचा दर: 5-7% प्रतिवर्ष</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demand-item" style="--percentage: 25%">
+                        <div class="demand-bar"></div>
+                        <div class="demand-info">
+                            <i class="fas fa-flask"></i>
+                            <div>
+                                <h3 data-mr="रासायनिक उद्योग" data-en="Chemical Industry">रासायनिक उद्योग</h3>
+                                <p><strong>25%</strong> <span data-mr="एकूण मागणी" data-en="Total Demand">एकूण मागणी</span></p>
+                                <p class="details" data-mr="वाढत्या मागणी. वाढीचा दर: 8-10% प्रतिवर्ष" data-en="Growing demand. Growth rate: 8-10% per year">वाढत्या मागणी. वाढीचा दर: 8-10% प्रतिवर्ष</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demand-item" style="--percentage: 10%">
+                        <div class="demand-bar"></div>
+                        <div class="demand-info">
+                            <i class="fas fa-prescription-bottle"></i>
+                            <div>
+                                <h3 data-mr="फार्मास्युटिकल" data-en="Pharmaceutical">फार्मास्युटिकल</h3>
+                                <p><strong>10%</strong> <span data-mr="एकूण मागणी" data-en="Total Demand">एकूण मागणी</span></p>
+                                <p class="details" data-mr="उच्च दर्जाची गरज. वाढीचा दर: 6-8% प्रतिवर्ष" data-en="High quality required. Growth rate: 6-8% per year">उच्च दर्जाची गरज. वाढीचा दर: 6-8% प्रतिवर्ष</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="demand-item" style="--percentage: 5%">
+                        <div class="demand-bar"></div>
+                        <div class="demand-info">
+                            <i class="fas fa-fish"></i>
+                            <div>
+                                <h3 data-mr="इतर उद्योग" data-en="Other Industries">इतर उद्योग</h3>
+                                <p><strong>5%</strong> <span data-mr="एकूण मागणी" data-en="Total Demand">एकूण मागणी</span></p>
+                                <p class="details" data-mr="मासेमारी, कापड इ. हंगामी मागणी" data-en="Fishing, textile etc. Seasonal demand">मासेमारी, कापड इ. हंगामी मागणी</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-mr="२०२५ चे बाजार ट्रेंड" data-en="2025 Market Trends">२०२५ चे बाजार ट्रेंड</h2>
+            <div class="trends-section">
+                <div class="trend-card positive-trend">
+                    <i class="fas fa-arrow-trend-up"></i>
+                    <h3 data-mr="नैसर्गिक मीठाची मागणी" data-en="Demand for Natural Salt">नैसर्गिक मीठाची मागणी</h3>
+                    <p data-mr="आरोग्य जागरूकतेमुळे नैसर्गिक समुद्री मीठाची मागणी 15-20% वाढली आहे. प्रीमियम ग्रेडसाठी चांगला दर मिळत आहे." data-en="Demand for natural sea salt has increased by 15-20% due to health awareness. Getting good rates for premium grades.">आरोग्य जागरूकतेमुळे नैसर्गिक समुद्री मीठाची मागणी 15-20% वाढली आहे. प्रीमियम ग्रेडसाठी चांगला दर मिळत आहे.</p>
+                </div>
+
+                <div class="trend-card positive-trend">
+                    <i class="fas fa-globe"></i>
+                    <h3 data-mr="निर्यात संधी" data-en="Export Opportunities">निर्यात संधी</h3>
+                    <p data-mr="मध्यपूर्व, आफ्रिका आणि दक्षिण-पूर्व आशियामध्ये भारतीय मीठाची मागणी वाढत आहे. निर्यात सुविधा सुधारल्या आहेत." data-en="Demand for Indian salt is increasing in Middle East, Africa and South-East Asia. Export facilities have improved.">मध्यपूर्व, आफ्रिका आणि दक्षिण-पूर्व आशियामध्ये भारतीय मीठाची मागणी वाढत आहे. निर्यात सुविधा सुधारल्या आहेत.</p>
+                </div>
+
+                <div class="trend-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3 data-mr="ऑनलाइन विक्री" data-en="Online Sales">ऑनलाइन विक्री</h3>
+                    <p data-mr="ई-कॉमर्स प्लॅटफॉर्मवर थेट ग्राहकांना विक्री करण्याची संधी. अधिक नफा मिळू शकतो." data-en="Opportunity to sell directly to customers on e-commerce platforms. Can get more profit.">ई-कॉमर्स प्लॅटफॉर्मवर थेट ग्राहकांना विक्री करण्याची संधी. अधिक नफा मिळू शकतो.</p>
+                </div>
+
+                <div class="trend-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3 data-mr="ऑर्गॅनिक प्रमाणपत्र" data-en="Organic Certification">ऑर्गॅनिक प्रमाणपत्र</h3>
+                    <p data-mr="ऑर्गॅनिक प्रमाणित मीठासाठी 30-40% अधिक दर मिळतो. प्रमाणीकरण प्रक्रिया सुलभ झाली आहे." data-en="Organic certified salt gets 30-40% higher rates. Certification process has become easier.">ऑर्गॅनिक प्रमाणित मीठासाठी 30-40% अधिक दर मिळतो. प्रमाणीकरण प्रक्रिया सुलभ झाली आहे.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt-bg">
+        <div class="container">
+            <h2 class="section-title" data-mr="विक्री मार्ग" data-en="Sales Channels">विक्री मार्ग</h2>
+            <div class="sales-channels">
+                <div class="channel-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3 data-mr="१. थेट व्यापाऱ्यांना" data-en="1. Direct to Traders">१. थेट व्यापाऱ्यांना</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4 data-mr="फायदे:" data-en="Advantages:">फायदे:</h4>
+                            <ul>
+                                <li>त्वरित पेमेंट</li>
+                                <li>मोठ्या प्रमाणात विक्री</li>
+                                <li>वाहतूक खर्च कमी</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4 data-mr="तोटे:" data-en="Disadvantages:">तोटे:</h4>
+                            <ul>
+                                <li>कमी दर मिळतो</li>
+                                <li>व्यापाऱ्यावर अवलंबून</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="channel-card">
+                    <i class="fas fa-building"></i>
+                    <h3 data-mr="२. सहकारी संस्था" data-en="2. Cooperative Society">२. सहकारी संस्था</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4 data-mr="फायदे:" data-en="Advantages:">फायदे:</h4>
+                            <ul>
+                                <li>चांगला दर</li>
+                                <li>गुणवत्ता प्रमाणन</li>
+                                <li>बाजारपेठ सुरक्षित</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4 data-mr="तोटे:" data-en="Disadvantages:">तोटे:</h4>
+                            <ul>
+                                <li>सभासद व्हावे लागते</li>
+                                <li>पेमेंट वेळ लागतो</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="channel-card">
+                    <i class="fas fa-laptop"></i>
+                    <h3 data-mr="३. ऑनलाइन प्लॅटफॉर्म" data-en="3. Online Platform">३. ऑनलाइन प्लॅटफॉर्म</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4 data-mr="फायदे:" data-en="Advantages:">फायदे:</h4>
+                            <ul>
+                                <li>सर्वाधिक नफा</li>
+                                <li>मोठी बाजारपेठ</li>
+                                <li>ब्रँडिंग संधी</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4 data-mr="तोटे:" data-en="Disadvantages:">तोटे:</h4>
+                            <ul>
+                                <li>पॅकिंग खर्च</li>
+                                <li>वाहतूक व्यवस्था</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="channel-card">
+                    <i class="fas fa-industry"></i>
+                    <h3 data-mr="४. थेट उद्योगांना" data-en="4. Direct to Industries">४. थेट उद्योगांना</h3>
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h4 data-mr="फायदे:" data-en="Advantages:">फायदे:</h4>
+                            <ul>
+                                <li>नियमित ऑर्डर</li>
+                                <li>दीर्घकालीन करार</li>
+                                <li>चांगली किंमत</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h4 data-mr="तोटे:" data-en="Disadvantages:">तोटे:</h4>
+                            <ul>
+                                <li>गुणवत्ता मानक कठोर</li>
+                                <li>मोठे प्रमाण आवश्यक</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4 data-mr="संपर्क माहिती" data-en="Contact Info">संपर्क माहिती</h4>
+                    <p><i class="fas fa-phone"></i> 1800-233-3663</p>
+                    <p><i class="fas fa-envelope"></i> help@saltpanbusiness.gov.in</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-mr="द्रुत दुवे" data-en="Quick Links">द्रुत दुवे</h4>
+                    <p><a href="index.html" data-mr="मुख्यपृष्ठ" data-en="Home">मुख्यपृष्ठ</a></p>
+                    <p><a href="schemes.html" data-mr="योजना" data-en="Schemes">योजना</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-mr="© २०२५ मीठ पान व्यवसाय मार्गदर्शक" data-en="© 2025 Salt Pan Business Guide">© २०२५ मीठ पान व्यवसाय मार्गदर्शक</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

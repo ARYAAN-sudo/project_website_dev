@@ -1,0 +1,180 @@
+# 📸 How to Add Your Own Images to the Website
+
+## Step 1: Create an Images Folder
+
+1. Go to your project folder: `C:\Users\visha\OneDrive\Desktop\ARYAN_code`
+2. Create a new folder called `images`
+3. Your folder structure should look like:
+   ```
+   ARYAN_code/
+   ├── images/           ← NEW FOLDER
+   ├── index.html
+   ├── production.html
+   ├── salt-types.html
+   ├── regions.html
+   ├── market.html
+   ├── schemes.html
+   ├── styles.css
+   └── script.js
+   ```
+
+## Step 2: Prepare Your Images
+
+### Recommended Image Sizes:
+- **Hero/Header images**: 1920x1080 pixels (landscape)
+- **Salt type images**: 600x400 pixels (landscape)
+- **Production process images**: 800x600 pixels
+- **Region images**: 800x500 pixels
+- **Scheme images**: 600x400 pixels
+- **Map image**: 1000x600 pixels
+
+### Recommended Image Names:
+Save your images with these names (or update the HTML with your names):
+
+#### For Salt Types Page (salt-types.html):
+- `sea-salt.jpg` - Sea salt image
+- `iodized-salt.jpg` - Iodized salt image
+- `industrial-salt.jpg` - Industrial salt image
+- `table-salt.jpg` - Table salt image
+- `rock-salt.jpg` - Rock salt/Sendha namak image
+- `black-salt.jpg` - Black salt/Kala namak image
+
+#### For Production Page (production.html):
+- `land-preparation.jpg` - Land being prepared
+- `salt-pans.jpg` - Salt pans view
+- `sea-water.jpg` - Sea water filling
+- `evaporation.jpg` - Water evaporating
+- `harvesting.jpg` - Salt being harvested
+- `storage.jpg` - Salt storage/warehouse
+
+#### For Regions Page (regions.html):
+- `raigad.jpg` - Raigad district salt pans
+- `ratnagiri.jpg` - Ratnagiri district salt pans
+- `sindhudurg.jpg` - Sindhudurg district salt pans
+- `thane.jpg` - Thane district salt pans
+- `maharashtra-map.jpg` - Maharashtra coastal map
+
+#### For Schemes Page (schemes.html):
+- `pmmsy.jpg` - Government scheme related image
+- `mudra.jpg` - MUDRA loan related image
+- `training.jpg` - Training/education related image
+
+#### For Homepage (index.html):
+- Currently uses Unsplash images - you can add:
+  - `hero-salt-pans.jpg` - Main hero image
+  - `overview-1.jpg`, `overview-2.jpg`, `overview-3.jpg`
+
+## Step 3: Add Images to the Folder
+
+1. Copy all your images into the `images` folder
+2. Make sure image names match exactly (case-sensitive)
+3. Supported formats: `.jpg`, `.jpeg`, `.png`, `.webp`
+
+## Step 4: Update HTML Files (if using different names)
+
+If your image names are different, update the HTML files:
+
+### Example in salt-types.html:
+Find this line:
+```html
+<img src="images/sea-salt.jpg" alt="Sea Salt">
+```
+
+Change `sea-salt.jpg` to your image name:
+```html
+<img src="images/YOUR_IMAGE_NAME.jpg" alt="Sea Salt">
+```
+
+## Step 5: Optimize Your Images (Optional but Recommended)
+
+For faster loading:
+1. **Compress images**: Use online tools like:
+   - TinyPNG (tinypng.com)
+   - Compressor.io
+   - ImageOptim
+
+2. **Convert to WebP**: WebP images are smaller:
+   - Use Squoosh.app
+   - Or online converters
+
+3. **Resize large images**: Don't use 4K images for web
+   - Maximum 1920px width for hero images
+   - 800px width for content images
+
+## Step 6: Test Your Website
+
+1. Open `index.html` in your browser
+2. Click through all pages
+3. Check if all images load correctly
+4. If image doesn't show:
+   - Check the file name spelling
+   - Check the file is in `images` folder
+   - Check the file extension (.jpg, .png, etc.)
+
+## Quick Reference: All Image Locations
+
+### index.html (Homepage)
+- Line ~80: `<img src="images/salt-pans-overview.jpg">`
+- Uses Unsplash fallback images
+
+### production.html
+- Step 1: `<img src="images/land-preparation.jpg">`
+- Step 2: `<img src="images/salt-pans.jpg">`
+- Step 3: `<img src="images/sea-water.jpg">`
+- Step 4: `<img src="images/evaporation.jpg">`
+- Step 5: `<img src="images/harvesting.jpg">`
+- Step 6: `<img src="images/storage.jpg">`
+
+### salt-types.html
+- Sea Salt: `<img src="images/sea-salt.jpg">`
+- Iodized: `<img src="images/iodized-salt.jpg">`
+- Industrial: `<img src="images/industrial-salt.jpg">`
+- Table: `<img src="images/table-salt.jpg">`
+- Rock: `<img src="images/rock-salt.jpg">`
+- Black: `<img src="images/black-salt.jpg">`
+
+### regions.html
+- Raigad: `<img src="images/raigad.jpg">`
+- Ratnagiri: `<img src="images/ratnagiri.jpg">`
+- Sindhudurg: `<img src="images/sindhudurg.jpg">`
+- Thane: `<img src="images/thane.jpg">`
+- Map: `<img src="images/maharashtra-map.jpg">`
+
+### market.html
+- Uses icon-based design (no images needed)
+
+### schemes.html
+- PMMSY: `<img src="images/pmmsy.jpg">`
+- MUDRA: `<img src="images/mudra.jpg">`
+- Training: `<img src="images/training.jpg">`
+
+## Fallback Images
+
+Don't worry! The website has **automatic fallback** to Unsplash images if your images are not found. The website uses this code:
+
+```html
+<img src="images/your-image.jpg" onerror="this.src='https://images.unsplash.com/...'">
+```
+
+This means:
+- If `images/your-image.jpg` exists → Shows your image ✅
+- If it doesn't exist → Shows Unsplash image ✅
+- Website never shows broken images! 🎉
+
+## Tips for Best Results
+
+1. **Use high-quality images** - Clear, well-lit photos
+2. **Consistent style** - All images should have similar look
+3. **Relevant content** - Images should match the section
+4. **Proper aspect ratio** - Follow recommended sizes
+5. **Compress before upload** - Faster website loading
+
+## Need Help?
+
+- Images not showing? Check browser console (F12) for errors
+- Wrong size? Use image editing software to resize
+- File too large? Compress using TinyPNG or similar tools
+
+---
+
+**That's it! Your images are now ready to use! 🎉**

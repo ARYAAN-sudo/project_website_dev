@@ -759,6 +759,760 @@ footer {
     .stats-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .processing-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evaporation-stages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* New Pages Styles */
+/* Regions Page */
+.regions-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.region-detailed-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.region-image {
+    height: 400px;
+    overflow: hidden;
+}
+
+.region-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.region-content {
+    padding: 2rem;
+}
+
+.region-content h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.region-content > p {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.region-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.region-stats .stat {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.region-stats .stat i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.region-stats .stat strong {
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.facilities {
+    background: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.facilities h3 {
+    color: var(--success);
+    margin-bottom: 1rem;
+}
+
+.facilities ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.facilities ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facilities ul li i {
+    color: var(--success);
+}
+
+.contact-info {
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.contact-info h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: var(--primary-color);
+}
+
+.map-container {
+    position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.coastal-map {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.map-info {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.map-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.map-info ul {
+    list-style: none;
+}
+
+.map-info ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.map-info ul li:last-child {
+    border-bottom: none;
+}
+
+/* Market Page */
+.price-detail-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.price-detail-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.price-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.price-detail-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.price-range {
+    margin-bottom: 1rem;
+}
+
+.price-range .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--success);
+}
+
+.price-range .unit {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.price-trend {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.price-trend.up {
+    background: #e8f5e9;
+    color: var(--success);
+}
+
+.price-trend.stable {
+    background: #e3f2fd;
+    color: var(--primary-color);
+}
+
+.market-note {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.price-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.demand-analysis {
+    margin-top: 2rem;
+}
+
+.demand-item {
+    margin-bottom: 2rem;
+}
+
+.demand-bar {
+    height: 12px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    width: var(--percentage);
+    margin-bottom: 1rem;
+    transition: width 0.5s ease;
+}
+
+.demand-info {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.demand-info i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.demand-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.demand-info .details {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.trends-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.trend-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--primary-color);
+}
+
+.trend-card.positive-trend {
+    border-left-color: var(--success);
+}
+
+.trend-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.trend-card.positive-trend i {
+    color: var(--success);
+}
+
+.trend-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.trend-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.sales-channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.channel-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.channel-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.channel-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.pros h4 {
+    color: var(--success);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.cons h4 {
+    color: #f44336;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.pros ul, .cons ul {
+    list-style: none;
+    font-size: 0.9rem;
+}
+
+.pros ul li, .cons ul li {
+    padding: 0.25rem 0;
+    color: var(--text-dark);
+}
+
+/* Schemes Page */
+.schemes-detailed {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.scheme-detailed-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.scheme-header-detail {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem;
+    position: relative;
+}
+
+.scheme-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255,255,255,0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.scheme-header-detail h2 {
+    font-size: 1.8rem;
+}
+
+.scheme-body {
+    padding: 2rem;
+}
+
+.scheme-image-container {
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.scheme-image-container img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.benefits-box, .eligibility-box, .documents-box {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.benefits-box h3, .eligibility-box h3, .documents-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.benefits-box ul, .eligibility-box ul {
+    list-style: none;
+}
+
+.benefits-box ul li, .eligibility-box ul li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.benefits-box ul li i {
+    color: var(--success);
+    margin-top: 3px;
+}
+
+.documents-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.doc-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.doc-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.application-process {
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.application-process h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.steps-horizontal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.step-h {
+    flex: 1;
+    text-align: center;
+}
+
+.step-number-h {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+.arrow-h {
+    color: var(--accent-color);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.contact-scheme {
+    background: #fff3e0;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.contact-scheme h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.contact-scheme p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.mudra-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.mudra-cat {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.mudra-cat h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.mudra-cat .amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--success);
+    margin-bottom: 0.5rem;
+}
+
+.simple-steps {
+    padding-left: 2rem;
+}
+
+.simple-steps li {
+    padding: 0.5rem 0;
+    color: var(--text-dark);
+}
+
+.training-modules {
+    margin: 2rem 0;
+}
+
+.training-modules h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.module {
+    background: var(--bg-light);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.module i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.module h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.module p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.training-details-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.training-info {
+    background: var(--bg-light);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.training-info h4 {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.training-info p {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.registration-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.reg-option {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.reg-option i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.reg-option h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.reg-option p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.other-schemes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.small-scheme-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.small-scheme-card:hover {
+    transform: translateY(-5px);
+}
+
+.small-scheme-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.small-scheme-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.small-scheme-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .salt-type-card {
+        grid-template-columns: 1fr;
+    }
+
+    .salt-image {
+        height: 300px;
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .processing-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .evaporation-stages {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .region-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .mudra-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .training-details-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .registration-options {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
@@ -830,6 +1584,52 @@ footer {
     .comparison-table th,
     .comparison-table td {
         padding: 0.5rem;
+    }
+
+    /* New pages responsive */
+    .region-image {
+        height: 250px;
+    }
+
+    .facilities ul {
+        grid-template-columns: 1fr;
+    }
+
+    .price-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-horizontal {
+        flex-direction: column;
+    }
+
+    .arrow-h {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+
+    .documents-list {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .methods-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grades {
+        grid-template-columns: 1fr;
+    }
+
+    .storage-guidelines ul {
+        grid-template-columns: 1fr;
     }
 }
 
