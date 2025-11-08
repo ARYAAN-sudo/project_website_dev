@@ -61,59 +61,105 @@ document.addEventListener('click', (e) => {
 const voiceBtn = document.getElementById('voiceBtn');
 let isSpeaking = false;
 let speechSynthesis = window.speechSynthesis;
+let currentUtterance = null;
 
 voiceBtn.addEventListener('click', () => {
     if (isSpeaking) {
+        // Stop speaking
         speechSynthesis.cancel();
         isSpeaking = false;
         voiceBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+        voiceBtn.title = currentLanguage === 'mr' ? 'पृष्ठ ऐका' : 'Listen to page';
         return;
     }
     
-    // Get the section currently in view
-    const sections = document.querySelectorAll('.section');
-    let currentSection = null;
+    // Read entire page content
+    readEntirePage();
+});
+
+function readEntirePage() {
+    // Collect all readable text from the page
+    let pageText = '';
     
+    // Get page title
+    const pageTitle = document.querySelector('h1');
+    if (pageTitle) {
+        pageText += pageTitle.textContent + '. ';
+    }
+    
+    // Get all main content sections
+    const sections = document.querySelectorAll('.section');
     sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            currentSection = section;
+        // Get section heading
+        const heading = section.querySelector('h2, .section-title');
+        if (heading) {
+            pageText += heading.textContent + '. ';
         }
+        
+        // Get paragraphs
+        const paragraphs = section.querySelectorAll('p');
+        paragraphs.forEach(p => {
+            if (p.textContent.trim() && !p.closest('.image-caption')) {
+                pageText += p.textContent + '. ';
+            }
+        });
+        
+        // Get list items
+        const listItems = section.querySelectorAll('li');
+        listItems.forEach(li => {
+            if (li.textContent.trim()) {
+                pageText += li.textContent + '. ';
+            }
+        });
     });
     
-    if (currentSection) {
-        const heading = currentSection.querySelector('h2, h3');
-        const text = heading ? heading.textContent : 'मीठ पान व्यवसाय';
-        speakText(text);
+    if (pageText.trim()) {
+        speakText(pageText);
     } else {
         const welcomeText = currentLanguage === 'mr' 
             ? 'मीठ पान व्यवसाय मार्गदर्शक. ग्रामीण उद्योजकांसाठी संपूर्ण माहिती.'
             : 'Salt Pan Business Guide. Complete information for rural entrepreneurs.';
         speakText(welcomeText);
     }
-});
+}
 
 function speakText(text) {
     if ('speechSynthesis' in window) {
+        // Clear any existing speech
+        speechSynthesis.cancel();
+        
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = currentLanguage === 'mr' ? 'mr-IN' : 'en-US';
         utterance.rate = 0.9;
         utterance.pitch = 1;
+        utterance.volume = 1;
+        
+        currentUtterance = utterance;
         
         utterance.onstart = () => {
             isSpeaking = true;
             voiceBtn.innerHTML = '<i class="fas fa-stop"></i>';
+            voiceBtn.title = currentLanguage === 'mr' ? 'बंद करा' : 'Stop';
         };
         
         utterance.onend = () => {
             isSpeaking = false;
             voiceBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+            voiceBtn.title = currentLanguage === 'mr' ? 'पृष्ठ ऐका' : 'Listen to page';
+            currentUtterance = null;
         };
         
-        utterance.onerror = () => {
+        utterance.onerror = (event) => {
             isSpeaking = false;
             voiceBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
-            console.log('Voice support not available');
+            voiceBtn.title = currentLanguage === 'mr' ? 'पृष्ठ ऐका' : 'Listen to page';
+            console.log('Voice error:', event.error);
+            if (event.error !== 'interrupted') {
+                alert(currentLanguage === 'mr' 
+                    ? 'आवाज समर्थन उपलब्ध नाही' 
+                    : 'Voice support not available');
+            }
+            currentUtterance = null;
         };
         
         speechSynthesis.speak(utterance);
@@ -213,11 +259,16 @@ function loadLanguagePreference() {
     }
 }
 
-// Update language toggle to save preference
-const originalToggle = langToggle.onclick;
+// Update language toggle to save preference and stop voice if speaking
 langToggle.addEventListener('click', () => {
+    // Stop voice when changing language
+    if (isSpeaking) {
+        speechSynthesis.cancel();
+        isSpeaking = false;
+        voiceBtn.innerHTML = '<i class="fas fa-volume-up"></i>';
+    }
     saveLanguagePreference(currentLanguage);
-});
+}, true);
 
 // Load saved language preference on page load
 window.addEventListener('load', () => {
